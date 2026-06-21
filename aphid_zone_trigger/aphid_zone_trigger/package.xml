@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>aphid_zone_trigger</name>
+  <version>0.0.1</version>
+  <description>
+    Standalone node that subscribes to existing aphid detection topics
+    and triggers zoned nozzle commands (3 vertical image zones per
+    camera, 6 nozzles total) on a new topic for the I2C solenoid driver.
+    Does not modify or depend on aphid_sprayer_bridge or sprayer_driver.
+  </description>
+  <maintainer email="sudan@example.com">Sudan Baral</maintainer>
+  <license>MIT</license>
+
+  <depend>rclpy</depend>
+  <depend>vision_msgs</depend>
+  <depend>sprayer_interfaces</depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
