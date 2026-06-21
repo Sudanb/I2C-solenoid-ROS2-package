@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>i2c_solenoid_driver</name>
+  <version>0.0.1</version>
+  <description>
+    MCP23017-based 8-channel I2C solenoid driver, subscribing to the existing
+    sprayer_interfaces/NozzleCommand topic. Runs alongside the TeeJet CAN
+    sprayer_driver package without modifying it.
+  </description>
+  <maintainer email="sudan@example.com">Sudan Baral</maintainer>
+  <license>MIT</license>
+
+  <depend>rclpy</depend>
+  <depend>sprayer_interfaces</depend>
+  <depend>std_srvs</depend>
+
+  <exec_depend>python3-smbus2</exec_depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
